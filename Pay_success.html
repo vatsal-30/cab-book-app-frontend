@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment Validation</title>
+        <meta name="viewport" width=device-width initial-scale=1.0>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+            @media only screen and (max-width: 900px) and (min-width: 620px)
+            {
+                .box
+                {
+                    width: 500px;
+                    margin: auto;
+                    transition-duration: .2s;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    margin-top: 60px;
+                    margin-bottom: 25px;
+                }
+                #B
+                {
+                    box-sizing: border-box;
+                    height: 60px;
+                    font-size: 110%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                }
+                .heading
+                {
+                    font-size: 85%;
+                }
+                #ICON
+                {
+                    font-size: 1150%;
+                }
+            }
+            @media only screen and (max-width:620px)
+            {
+                .box
+                {
+                    box-sizing: border-box;
+                    border: none;
+                    box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0), 0 0px 0px 0 rgba(255, 255, 255, 0);
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 20px;
+                    margin-bottom: 0px;
+                    transition-duration: .2s;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                #B
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 85%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 40px;
+                    height: 55px;
+                    font-size: 110%;
+                    width: 100%;
+                }
+                .heading
+                {
+                    font-size: 80%;
+                }
+                #ICON
+                {
+                    font-size: 1100%;
+                }
+            }
+            body
+            {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 30px;
+                
+                max-width: 740px;
+                margin: auto;
+                margin-top: 60px;
+                margin-bottom: 25px;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 6px;
+                transition-duration: .2s;
+                align-items: center;
+            }
+            input[type=button]
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-weight:600;
+                background-color: black;
+                color: rgb(255, 255, 255);
+                transition-duration: .2s;
+                border-radius: 70px;
+                border: none;
+                height: 65px;
+                width: 100%;
+                font-size: 120%;
+            }
+            
+            input[type=button]:hover
+            {
+                background-color: #04AA6D;
+                color: rgb(255, 255, 255);
+                border: none;
+            }
+            .material-icons
+            {
+                font-size: 1300%;
+                transition-duration: .2s;
+                color: #09c47f;
+            }
+        </style>
+    </head>
+    <body class="box">
+        <br><br>
+        <div style="text-align: center;">
+            <i id="ICON" class="material-icons">check_circle</i>
+        </div>
+        <strong class="heading" >
+            <p  style="text-transform: capitalize;
+            box-sizing: border-box;
+            color: rgb(20, 20, 20);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 240%;">
+            Payment Successful !!
+        </p>
+        </strong>
+        <p  style="
+        font-weight: 400;
+            box-sizing: border-box;
+            margin-top: -20px;
+            color: #085e3e;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 120%;">
+            Your cab has been booked.
+        </p>
+        <br><br>
+            
+                <a href="Index.html" target="_parent"><input id="B" type="button" value="Continue" ></a>
+                <br><br><br>
+            
+        </div>
+    </body>
+</html>

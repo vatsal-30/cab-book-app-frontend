@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>City Rides</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta name="viewport" width=device-width initial-scale=1.0>
+        <script>
+            function set()
+            {
+                let current=new Date();
+                let hh=current.getHours();
+                let mm=current.getMinutes();
+                let s=""+current.getDate()+" - "+dayname[current.getDay()];
+                if(document.forms["details"]["day"].value==s)
+                {
+                    if(hh<10)
+                    {
+                        hh="0"+hh;
+                    }
+                    if(mm<10)
+                    {
+                        mm="0"+mm;
+                    }
+                    var time=hh+":"+mm;
+                    document.getElementById("time").min = time;
+                }
+                else
+                {
+                    document.getElementById("time").min = "00:01"; 
+                }
+            }
+        </script>
+        <style>
+            @media only screen and (max-width: 900px) and (min-width: 620px)
+            {
+                .box
+                {
+                    width: 500px;
+                    margin: auto;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    margin-top: 80px;
+                    margin-bottom: 25px;
+                    
+                }
+                .fields
+                {
+                    width: 100%;
+                    box-sizing: border-box;
+                    height: 43px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 98%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 100%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                }
+                .heading
+                {
+                    font-size: 100%;
+                }
+                #time
+                {
+                    width: 100%;
+                }
+                .fi
+                {
+                    margin-bottom: 15px;
+                }
+            }
+            @media only screen and (max-width:620px)
+            {
+                .box
+                {
+                    box-sizing: border-box;
+                    height: 100px;
+                    border: none;
+                    width: 100%;
+                    box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0), 0 0px 0px 0 rgba(255, 255, 255, 0);
+                    margin: auto;
+                    margin-top:50px;
+                    margin-bottom: 0px;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                .fields
+                {
+                    
+                    width: 100%;
+                    box-sizing: border-box;
+                    height: 40px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 95%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+                .heading
+                {
+                    font-size: 100%;
+                    padding-bottom: 100px;
+                }
+                #time
+                {
+                    width: 100%;
+                }
+                .f
+                {
+                    padding-top: 30px;
+                }
+                .fi
+                {
+                    margin-bottom: 15px;
+                }
+            }
+            body
+            {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid grey;
+                border-radius: 12px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.116), 0 8px 15px 0 rgba(0, 0, 0, 0.103);
+                max-width: 740px;
+                margin: auto;
+                margin-top: 80px;
+                margin-bottom: 25px;
+                padding-left: 50px;
+                transition-duration: .2s;
+                padding-right: 50px;
+                padding-bottom: 6px;
+                align-items: center;
+                border: 3px inset grey;
+            }
+            input
+            {
+                font-size:100%;
+                transition-duration: .2s;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 100%;
+                box-sizing: border-box;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            input[type=submit]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: rgb(3, 3, 3);
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 100%;
+                margin-top: 20px;
+            }
+            input[type=submit]:hover
+            {
+                background-color: #04AA6D;
+            }
+            select
+            {
+                box-sizing: border-box;
+                transition-duration: .2s;
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 312px;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            input[type=time]
+            {
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 312px;
+                height: 45px;
+            }
+            .f
+            {
+                padding-top: 20px;
+                transition-duration: .2s;
+            }
+            .loc
+            {
+                color: rgb(97, 97, 97);
+                margin-top: 10px;
+            }
+            .loc:hover
+            {
+                color: black;
+            }
+        </style>
+    </head>
+    <body class="box" >
+        <strong class="heading"><h1 style="text-transform: capitalize;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 220%;">CITY TAXI</h1></strong>
+        
+        <form action=""  method="post" name="details">
+            <div class="f"><b ><label for="start">From:</label><br></b>
+            <input class="fields" type="text" id="start" name="start" placeholder="Pickup location" autofocus required><br><div class="loc" onclick="getLocation()"><i class="material-icons" style="float: left;font-size: 120%;">gps_fixed</i> <span style="font-size: 110%;">Your location</span></div><br></div>
+           
+            <b><label for="destination">To:</label><br></b>
+            <input class="fields" type="text" id="destination" name="end" placeholder="Destination" required><br><br>
+            <b><label for="day time">When:</label><br></b>
+            <select class="fields fi" id="day" name="day" value="dfvd" onclick="set()">
+            </select>
+            <input class="fields"  id="time" name="time" type="time" min="00:01" max="23:59" onclick="set()"><br><br><br>
+            <input id="S" type="submit" name="submit" value="Schedule" ></a><br><br><br>           
+        </form>
+        <script>
+            var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var d = new Date();
+            var str = "";
+            var dayname = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+            for(var i = 0;i<=6;i++)
+            {
+                d.setDate(d.getDate());
+                str=str+ "<option value=\""+d.getDate()+" - "+dayname[d.getDay()]+"\">"+d.getDate()+" - "+dayname[d.getDay()]+"</option>";
+                document.getElementById('day').innerHTML = str;
+                d.setDate(d.getDate()+1);
+            }
+        </script>
+         <script>
+            var x = document.getElementById("start");
+            function getLocation() 
+            {
+                if (navigator.geolocation) 
+                {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } 
+                else 
+                { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) 
+            {
+                x.defaultValue = position.coords.latitude + 
+                "," + position.coords.longitude;
+            }
+        </script>
+    </body>
+</html>

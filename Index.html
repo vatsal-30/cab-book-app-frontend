@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GetWheels</title>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="Index.css">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="Navbar.js"></script>
+        <style>
+            @media only screen and (max-width:1300px)
+            {
+                .BODY
+                {
+                    background-image: url("images/Index.jpg");
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-size: 960px;
+                    background-position-x: 115%;
+                    background-position-y: 100px;
+                }
+            }
+            @media only screen and (max-width:1050px)
+            {
+                .BODY
+                {
+                    background-image: url("images/Index.jpg");
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-size: 960px;
+                    background-position-x: 85px;
+                    background-position-y: 100px;
+                }
+            }
+            
+            @media only screen and (max-width:850px)
+            {
+                #TAXI
+                {
+                    font-size: 230%;
+                    box-sizing:none;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    height: 95px;
+                }
+                #RENTAL
+                {
+                    height: 95px;
+                    font-size: 230%;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin-left: -0px;
+                }
+                #TABS
+                {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    border: none;
+                    box-shadow: none;
+                    width: 95%;
+                    margin: auto;
+                    margin-bottom: 100px;
+                    margin-top: 400px;
+                }
+                .BODY
+                {
+                    background-image: url("images/Index2.png");
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-size: 350px;
+                    background-position-x: 50%;
+                    background-position-y: 150px;
+                }
+                #FONT
+                {
+                    font-size: 115%;
+                    height:220px;
+                }
+                #LOGO
+                {
+                    margin-left: -20px;
+                    font-size: 200%;
+                }
+                #bar
+                {
+                    margin-top: -5px;
+                    height: 82px;
+                    width: 102%;
+                }
+                #LOGIN,#NAV
+                {
+                    transition-duration: .2s;
+                    background-color:  rgb(255, 255, 255);
+                    border-radius: 2px;
+                    font-size: 115%;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    padding: 2px;
+                    float: right;
+                    margin-right: 4px;
+                    margin-left: 4px;
+                    transition-duration: .2s;
+                }
+                #HIDE
+                {
+                    display: none;
+                }
+                #MICON
+                {
+                    font-size: 250%;
+                    color: rgb(0, 0, 0);
+                    padding: 0%;
+                }
+                #MICON:hover
+                {
+                    color: #04AA6D;
+                }
+            } 
+            @media only screen and (max-width:550px)
+            {
+                #HIDE
+                {
+                    display: none;
+                }
+                #MICON
+                {
+                    font-size: 230%;
+                    color: rgb(0, 0, 0);
+                    padding: 0%;
+                }
+                #MICON:hover
+                {
+                    color: #04AA6D;
+                    padding: 0%;
+                }
+                #TAXI
+                {
+                    font-size: 200%;
+                    box-sizing:none;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    height: 80px;
+                }
+                #RENTAL
+                {
+                    height: 80px;
+                    font-size: 200%;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin-left: -0px;
+                }
+                #TABS
+                {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    box-shadow: none;
+                    width: 100%;
+                    margin-bottom: 100px;
+                    margin-top: 400px;
+                }
+                #FONT
+                {
+                    font-size: 105%;
+                    height: 210px;
+                }
+                #LOGO
+                {
+                    margin-left: -25px;
+                    font-size: 190%;
+                }
+                #bar
+                {
+                    margin-top: -5px;
+                    height: 79px;
+                    width: 103%;
+                }
+            }
+            @media only screen and (max-width:1220px)
+            {
+            
+                #IMAGE1
+                {
+                    display:block;
+                    width: 92%;
+                    margin-left: 4%;
+                    float: none;
+                    margin-right: 80px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                #IMAGE3
+                {
+                    margin-top: -70px;
+                    display:block;
+                    width: 92%;
+                    margin-left: 4%;
+                    float: none;
+                    margin-right: 80px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                #IMAGE2
+                {
+                    margin-top: -70px;
+                    display:block;
+                    width: 92%;
+                    margin-right: 4%;
+                    float: none;
+                    margin-left: 80px;
+                    margin-bottom: 55px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                .C
+                {
+                    margin-left: 4%;
+                }
+                #CONTENT2
+                {
+                    margin-left: 0%;
+                    margin-right: 70px;
+                    font-size: 270%;
+                }
+                #CONTENT2_
+                {
+                    margin-left: 0%;
+                    margin-right: 70px;
+                    font-size: 110%;
+                }
+                #CONTENT1
+                {
+                    font-size: 270%;
+                    transition-duration: .2s;
+                }
+                #CONTENT1_
+                {
+                    font-size: 110%;
+                }
+            }
+            @media only screen and (max-width:600px)
+            {
+                #CONTENT2
+                {
+                    margin-left: 0%;
+                    margin-right: 70px;
+                    font-size: 240%;
+                }
+                #CONTENT2_
+                {
+                    margin-left: 0%;
+                    margin-right: 70px;
+                    font-size: 100%;
+                }
+                #CONTENT1
+                {
+                    font-weight: 500;
+                    font-size: 240%;
+                    transition-duration: .2s;
+                }
+                #CONTENT1_
+                {
+                    font-size: 100%;
+                }
+            }
+            body
+            {
+                background-image: url("images/index.jpg");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: 75%;
+                background-position-x: 115%;
+                background-position-y: 100px;
+                
+            }
+            button
+            {
+                box-sizing: border-box;
+                background-color: rgb(10, 10, 10);
+                color: white;
+                border: none;
+                width: 380px;
+                height: 100px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 270%;
+                text-align: center;
+                transition-duration: .2s;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.116), 0 6px 20px 0 rgba(0, 0, 0, 0.103);
+            }
+            button:hover
+            {
+                background-color: #04AA6D;
+                color: white;
+            }
+            .taxi,.rental
+            {
+                margin-bottom: 30px;
+                
+            }
+            .rental
+            {
+                width: 290px;
+                margin-left: 50px;
+            }
+            .image1
+            {
+                box-sizing: border-box;
+                width: 43%;
+                height: auto;
+                margin-right: 13%;
+                float: left;
+                margin-left: 70px;
+                transition-duration: .2s;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .content1
+            {
+                box-sizing: border-box;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 300%;
+                font-weight: 500;
+                color: rgb(51, 51, 51);
+                margin-top: 50px;
+                margin-right: 70px;
+                text-align: left;
+                padding-right: 0px;
+                transition-duration: .2s;
+            }
+            .content1_
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-family:sans-serif;
+                font-size: 120%;
+                color: rgb(61, 61, 61);
+                text-align: left;
+                margin-right: 70px;
+            }
+            .content2
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 300%;
+                font-weight: 500;
+                color: rgb(51, 51, 51);
+                margin-top: 50px;
+                margin-left: 70px;
+                text-align: left;
+                padding-right: 0px;
+                
+            }
+            .content2_
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-family:sans-serif;
+                font-size: 120%;
+                color: rgb(61, 61, 61);
+                text-align: left;
+                margin-left: 70px;
+            }
+            .learn1
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-family:sans-serif;
+                font-size: 110%;
+                text-align: left;
+                color: rgb(51, 51, 51);
+                text-decoration: underline;
+                text-underline-offset: 8px;
+                text-decoration-thickness: 1.5px;
+                text-decoration-color: rgb(180, 180, 180);
+                transition-duration: .2s;
+            }
+            .learn1:hover
+            {
+               text-decoration-color: black;
+            }
+            .learn2
+            {
+                transition-duration: .2s;
+                margin-left: 70px;
+                box-sizing: border-box;
+                font-family:sans-serif;
+                font-size: 110%;
+                text-align: left;
+                color: rgb(51, 51, 51);
+                text-decoration: underline;
+                text-underline-offset: 8px;
+                text-decoration-thickness: 1.5px;
+                text-decoration-color: rgb(180, 180, 180);
+                transition-duration: .2s;
+            }
+            .learn2:hover
+            {
+               text-decoration-color: black;
+            }
+            .image2
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                width: 43%;
+                margin-left: 13%;
+                height: auto;
+                margin-right: 70px;
+                float: left;
+                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .tabs
+            {
+                background-color: rgb(255, 255, 255);
+                width: 440px;
+                box-sizing: border-box;
+                margin-left: 0px;
+                margin-bottom: 300px;
+                margin-top: 180px;
+                padding-left:30px;
+                padding-bottom: 5px;
+                padding-top: 35px;
+                border-top: 5px solid rgb(26, 26, 26);
+                border-bottom: 5px solid rgb(26, 26, 26);
+                
+            }
+            .footer
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                background-color: rgb(26, 26, 26);
+                color: white;
+                width: 101.35%;
+                height: 230px;
+                margin-left: -10px;
+                font-size: 130%;
+                text-transform: capitalize;
+                text-align: center;
+                padding-top: 25px;
+                font-family:sans-serif;
+                margin-bottom: -8px;
+            }
+            .fa
+            {
+                box-sizing: border-box;
+                transition-duration: .2s;
+                text-align: center;
+                font-size: 160%;
+                border-radius: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .fa:hover
+            {
+                color: rgb(163, 163, 163);
+            }
+            .C
+            {
+                box-sizing: border-box;
+            }
+            .material-icons
+            {
+                font-size: 130%;
+                float: left;color: rgb(255, 255, 255);padding-right: 5px;
+            }
+            .whole
+            {
+                max-width: 1250px;
+                margin: auto;
+            }
+        .mi
+        {
+            color: black;
+        }
+        
+        </style>
+    </head>
+    <body class="BODY">
+        <div id="bar">
+            <nav >
+                <ul>
+                    <a href="Index.html" target="_parent"><b><li id="LOGO" class="logo" title="Home" >GETWHEELS</li></b></a>
+                    <a href="Signup.html" target="_parent"><li id="LOGIN" class="login" title="Sign Up" style="margin-right: 20px;">
+                        <i id="MICON" class="material-icons" >person</i>
+                        <span id="HIDE">Sign Up</span>
+                        </li></a>
+                        <a href="Login.html" target="_parent"><li id="LOGIN" class="login" title="Login" >
+                    <i id="MICON" class="material-icons" >login</i>
+                    <span id="HIDE">Login</span>
+                    </li></a>
+                </ul>
+            </nav>
+        </div>      
+            <div class="main">
+                <section>
+                    <div class="whole">
+                    <div class="tabs" id="TABS">
+                        <a href="Taxi.html" target="_parent" title="Book a cab"><button class="taxi" id="TAXI">Request a Ride</button></a><br>
+                        <a href="Rental.html" target="_parent" title="Hire a cab"><button class="rental" id="RENTAL">Hire a Cab</button></a><br>
+                        
+                    </div>
+                </div>
+                    <div style="max-width: 1500px;margin: auto;box-sizing: border-box;" id="RIDES">
+                        <img id="IMAGE1" class="image1"  src="images/Intracity.jpeg" alt="Person sitting in a cab" >
+                        <br>
+                        <div class="C">
+                            <p id="CONTENT1" class="content1">Intracity Rides</p>
+                            <p id="CONTENT1_" class="content1_">Book Intracity to get through your everyday travel needs with affordable prices.<br><br></p>
+                            
+                        </div>
+                    </div>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    <div style="max-width: 1500px;margin: auto;box-sizing: border-box;">
+                        <img id="IMAGE2" class="image2" src="images/Rental.jpeg" alt="Person sitting in a cab" style="float: right;" >
+                        <br>
+                        <div class="C">
+                            <p id="CONTENT2" class="content2">Rental Services</p>
+                            <p id="CONTENT2_" class="content2_">Hire a cab to save time with one car and driver for your multi-stop trips.<br><br></p>
+                            
+                        </div>
+                    </div>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    <div style="max-width: 1500px;margin: auto;box-sizing: border-box;">
+                       <img id="IMAGE3" class="image1"  src="images/Intercity.jpg" alt="Person sitting in a cab" >
+                        <br>
+                        <div class="C">
+                            <p id="CONTENT1" class="content1">Intercity Rides</p>
+                            <p id="CONTENT1_" class="content1_">Book Intercity to head outstation anytime in convenient and affordable cars.<br><br></p>
+                            
+                        </div>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
+            </div>
+            <div id="FONT" class="footer">
+                <footer>
+                    <p style="font-size: 100%;">find us on</p>
+                    <i id="ICONS" class="fa fa-facebook" title="Facebook"></i>
+                    <i id="ICONS" class="fa fa-instagram" title="Instagram"></i>
+                    <i id="ICONS" class="fa fa-snapchat-ghost" title="Snapchat"></i>
+                    <i id="ICONS" class="fa fa-pinterest" title="Pinterest"></i>
+                    <i id="ICONS" class="fa fa-twitter" title="Twitter"></i>
+                    <i id="ICONS" class="fa fa-linkedin" title="LinkedIn"></i><br><br><br>
+                    <p style="font-size: 65%;text-transform: none;">Powered by <span style="text-decoration: underline;">Getwheels</span></p>
+                </footer>
+            </div>   
+    </body>
+</html>

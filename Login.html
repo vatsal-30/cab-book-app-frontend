@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" width=device-width initial-scale=1.0>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script>
+            function checkForm()
+            {
+                let e = document.forms["Account"]["email"].value;
+                for(let i=0;i<e.length;i++)
+                {
+                    if(e.charCodeAt(i)>=65 && e.charCodeAt(i)<=90)
+                    {
+                        alert("Please enter E-mail in lowercase");
+                        document.getElementById("email").focus();
+                        return false;
+                    }
+                }
+            }
+            function display()
+            {
+                var s=document.getElementById("password");
+                if(s.type==="password")
+                {
+                    s.type="text";
+                }
+                else
+                {
+                    s.type="password";
+                }
+            }
+        </script>
+        <style>
+            @media only screen and (max-width: 900px) and (min-width: 620px)
+            {
+                .box
+                {
+                    width: 500px;
+                    margin: auto;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 43px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 98%;
+                }
+                #B,#S,#R
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 100%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                }
+                strong
+                {
+                    font-size: 100%;
+                }
+                .heading
+                {
+                    font-size: 95%;
+                }
+                .sign,.forgot
+                {
+                    font-size: 98%;
+                }
+                .image
+                {
+                    width: 210px;
+                }
+                .show
+                {
+                    font-size: 98%;
+                }
+            }
+            @media only screen and (max-width:620px)
+            {
+                .box
+                {
+                    box-sizing: border-box;
+                    border: none;
+                    box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0), 0 0px 0px 0 rgba(255, 255, 255, 0);
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 40px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 95%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+                #B
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+                #R
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    width: 40%;
+                }
+                strong
+                {
+                    font-size: 100%;
+                }
+                .heading
+                {
+                    font-size: 90%;
+                }
+                .sign,.forgot
+                {
+                    font-size: 95%;
+                }
+                .image
+                {
+                    width: 210px;
+                }
+                .show
+                {
+                    font-size: 95%;
+                }
+            }
+            body
+            {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid grey;
+                border-radius: 12px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.116), 0 8px 15px 0 rgba(0, 0, 0, 0.103);
+                max-width: 740px;
+                margin: auto;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 6px;
+                align-items: center;
+            }
+            input
+            {
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 100%;
+                box-sizing: border-box;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                transition-duration: .2s;
+            }
+            input[type=button]
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: #f44336;
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 49.4%;
+            }
+            input[type=reset]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: rgb(53, 51, 51);
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 40%;
+            }
+            input[type=reset]:hover
+            {
+                opacity: 80%;
+            }
+            input[type=button]:hover
+            {
+                opacity: 80%;
+            }
+            input[type=submit]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: #04AA6D;
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 49.4%;
+            }
+            input[type=submit]:hover
+            {
+                opacity: 80%;
+            }
+            img
+            {
+                box-sizing: border-box;
+                width:220px;
+                height: auto;
+                margin: auto;
+                display: flex;
+                align-content: center;
+                transition-duration: .2s;
+                image-resolution: 100%;
+                padding: 0%;
+            }
+            input[type=email]
+            {
+                border: 1px solid rgb(88, 88, 88);
+                border-radius: 2px;
+            }
+            input[type=password]
+            {
+                border: 1px solid rgb(88, 88, 88);
+                border-radius: 2px;
+            }
+            .forgot
+            {
+                box-sizing: border-box;
+                text-align: right;
+                transition-duration: .2s;
+                border-radius: 1px;
+                color: rgb(42, 42, 194);
+                font-weight: 100;
+            }
+            .forgot:hover
+            {
+                color: rgb(78, 27, 219);
+                text-decoration: underline;
+            }
+            .sign
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                width: 100%;
+                text-align: left;
+                padding:1px;
+                border-radius: 1px;
+                color: rgb(42, 42, 194);
+                font-weight: 100;
+            }
+            .sign:hover
+            {
+                color: rgb(78, 27, 219);
+                text-decoration: underline;
+            }
+            .material-icons
+            {
+                font-size: 90%;
+            }
+        </style>
+    </head>
+    <body class="box">
+        <div >
+            <strong class="heading">
+                <h1  style="text-transform: capitalize;
+                box-sizing: border-box;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                margin-left: -35px;
+                font-size: 200%;"><i id="MICON" class="material-icons" style="float:center;text-align: center;">login</i>
+                <span>Login</span>
+                </h1>
+            </strong>
+            <img class="image" src="images/login.jpeg" alt="Animated photo of user" >
+            <form action=""  method="post"  onsubmit="return checkForm()" name="Account">
+                <br><b><label for="email">E-mail</label><br></b>
+                <input class="fields" type="email" id="email" name="email" placeholder="E-mail" autofocus required autocomplete="on"><br><br>
+                <b><label for="password">Password</label><br></b>
+                <input class="fields" type="password" id="password" name="password" min="8" maxlength="25" required placeholder="Password"><br>
+                
+                <input type="checkbox" name="show" id="show" value="show" onclick="display()" 
+                style="
+                
+                width: 25px;
+                height: 18px;margin-top: 15px;margin-bottom: 35px;">
+                
+                <label for="show" style="text-align: right; " class="show">Show password</label><br>
+                
+                <a href="Index.html" target="_self"><input id="B" type="button" value="Cancel" ></a>
+                <input id="S" type="submit"  value="Login">
+                <br>
+                <a href="Signup.html" target="_self" style="text-decoration: none;"><p class="sign">Don't have an account? Sign Up</p></a>
+                <a href="AccRec.html" target="_self" style="text-decoration: none;"><p class="forgot">Forgot Password?</p></a>
+                <input type="reset" value="Clear" id="R"><br><br>
+            </form>
+        </div>
+    </body>
+</html>

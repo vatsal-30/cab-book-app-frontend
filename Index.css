@@ -1,0 +1,92 @@
+ul
+{
+    list-style-type: none;
+}
+
+.logo
+{
+    transition-duration: .2s;
+    float: left;
+    font-size: 210%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    padding-top: 8px;
+}
+.nav
+{
+    transition-duration: .2s;
+    background-color:  rgb(255, 255, 255);
+    color:rgb(3, 3, 3);
+    border-radius: 40px;
+    font-size: 128%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20px;    
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    float: right;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition-duration: .2s;
+}
+.login
+{
+    transition-duration: .2s;
+    background-color:  rgb(3, 3, 3);
+    color:white;
+    border-radius: 40px;
+    font-size: 128%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20px;    
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    float: right;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition-duration: .2s;
+}
+.login:hover,.nav:hover
+{
+    background-color: #04AA6D;
+    color: white;
+}
+.nav:hover
+{
+    background-color: #04AA6D;
+    color: white;
+}
+a:link
+{
+    color: black;
+}
+a:visited
+{
+    color: black;
+}
+a:active
+{
+    color: black;
+}
+#bar
+{
+    transition-duration: .2s;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    float: right;
+    width: 100.7%;
+    height: 86px;
+    background-color: rgb(255, 255, 255);
+    transition: top 0.3s;
+    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+    margin-left: -10px;
+    margin-top: -3px;
+}
+.main
+{
+    transition-duration: .2s;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 90px;
+}
