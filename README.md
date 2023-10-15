@@ -3,7 +3,7 @@
 * It includes Homepage, Login page, Signup page, Payment page etc.<br />
 * The website is highly responsive.
 
-# Technogies Used:
+# Technologies Used:
 * HTML
 * CSS
 * JavaScript
