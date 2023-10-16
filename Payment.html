@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment</title>
+        <meta name="viewport" width=device-width initial-scale=1.0>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function checkForm()
+            {
+                let e = document.getElementById("card_no").value;
+                let c = document.getElementById("cvv").value;
+                if(e.length!=16)
+                {
+                    alert("Please, Enter card number properly.");
+                    document.getElementById("card_no").focus();
+                    return false;
+                }
+                for(let i=0;i<e.length;i++)
+                {
+                    if((e.charCodeAt(i)>=0 && e.charCodeAt(i)<=47) || e.charCodeAt(i)>=56)
+                    {
+                        alert("Please, Enter card number properly.");
+                        document.getElementById("card_no").focus();
+                        return false;
+                    }
+                }
+                if(c.length!=3)
+                {
+                    alert("Please, Enter CVV properly.");
+                    document.getElementById("cvv").focus();
+                    return false;
+                }
+                for(let i=0;i<c.length;i++)
+                {
+                    if((c.charCodeAt(i)>=0 && c.charCodeAt(i)<=47) || c.charCodeAt(i)>=56)
+                    {
+                        alert("Please, Enter CVV properly.");
+                        document.getElementById("cvv").focus();
+                        return false;
+                    }
+                }
+            }
+        </script>
+        <style>
+            @media only screen and (max-width: 900px) and (min-width: 620px)
+            {
+                .box
+                {
+                    width: 500px;
+                    margin: auto;
+                    transition-duration: .2s;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 43px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 98%;
+                }
+                #B,#S,#R
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 100%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                }
+                strong
+                {
+                    font-size: 100%;
+                }
+                .heading
+                {
+                    font-size: 95%;
+                }
+                .fi
+                {
+                    margin-bottom: 15px;
+                }
+                #ICONS 
+                {
+                    margin-top: -10px;
+                    margin-bottom: 20px;
+                    padding: 7px;
+                    font-size: 250%;
+                }
+            }
+            @media only screen and (max-width:620px)
+            {
+                #ICONS 
+                {
+                    margin-top: -10px;
+                    margin-bottom: 20px;
+                    padding: 7px;
+                    font-size: 250%;
+                }
+                .box
+                {
+                    box-sizing: border-box;
+                    border: none;
+                    box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0), 0 0px 0px 0 rgba(255, 255, 255, 0);
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    transition-duration: .2s;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 40px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 95%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+                #B
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+                #R
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    width: 40%;
+                }
+                strong
+                {
+                    font-size: 100%;
+                }
+                .heading
+                {
+                    font-size: 90%;
+                }
+                .fi
+                {
+                    margin-bottom: 15px;
+                }
+            }
+            body
+            {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid grey;
+                border-radius: 12px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.116), 0 8px 15px 0 rgba(0, 0, 0, 0.103);
+                max-width: 740px;
+                margin: auto;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 6px;
+                transition-duration: .2s;
+                align-items: center;
+            }
+            input
+            {
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 100%;
+                box-sizing: border-box;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                transition-duration: .2s;
+            }
+            input[type=button]
+            {
+                transition-duration: .2s;
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: rgb(3, 3, 3);
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 49.4%;
+            }
+            input[type=reset]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: rgb(53, 51, 51);
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 40%;
+            }
+            .icon-container 
+            {
+                margin-top: -10px;
+                margin-bottom: 20px;
+                padding: 7px;
+                font-size: 300%;
+                transition-duration: .2s;
+            }
+            input[type=reset]:hover
+            {
+                opacity: 80%;
+            }
+            input[type=button]:hover
+            {
+                background-color: #04AA6D;
+            }
+            input[type=submit]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: rgb(3, 3, 3);
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 49.4%;
+            }
+            input[type=submit]:hover
+            {
+                background-color: #04AA6D;
+            }
+            img
+            {
+                box-sizing: border-box;
+                width:220px;
+                height: auto;
+                margin: auto;
+                display: flex;
+                align-content: center;
+                transition-duration: .2s;
+                image-resolution: 100%;
+                padding: 0%;
+            }
+            input[type=text]
+            {
+                border: 1px solid rgb(88, 88, 88);
+                border-radius: 2px;
+            }
+            input[type=password]
+            {
+                border: 1px solid rgb(88, 88, 88);
+                border-radius: 2px;
+            }
+            select
+            {
+                box-sizing: border-box;
+                transition-duration: .2s;
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 312px;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            .cards
+            {
+                margin-left: 5px;
+                transition-duration: .2s;
+            }
+        </style>
+    </head>
+    <body class="box">
+        <div >
+        <strong class="heading" >
+            <h1  style="text-transform: capitalize;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 220%;">
+            Payment gateway
+            </h1>
+        </strong>
+    </div>
+            <form action=""  method="post"  onsubmit="return checkForm()" name="Account">
+                <br><br>
+                <b><p class="cards">Accepted cards:</p></b>
+                <div class="icon-container" id="ICONS">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:rgb(0, 102, 255);"></i>
+                    <i class="fa fa-cc-mastercard" style="color:rgb(238, 56, 56);"></i>
+                    <i class="fa fa-cc-discover" style="color:rgb(255, 171, 14);"></i>
+                    <i class="fa fa-cc-paypal" style="color:rgb(66, 66, 226);"></i>
+                    <span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">....</span>
+                  </div>
+                <br><b><label for="name_on_card">Name on card</label><br></b>
+                <input class="fields" type="text" id="name_on_card" name="name_on_card" placeholder="Name on card" maxlength="25" autofocus required autocomplete="on"><br><br>
+                
+                <b><label for="card_no">Card Number</label><br></b>
+                <input class="fields" type="password" id="card_no" name="card_no"  maxlength="16" required placeholder="9999-8888-7777-6666"><br><br>
+                
+                <b><label for="cvv">CVV</label><br></b>
+                <input class="fields" type="password" id="cvv" name="cvv"  maxlength="3" required placeholder="CVV"><br><br>
+                <b><label for="exp_month exp_year">Expiry month & year:</label><br></b>
+                <select class="fields fi" id="exp_month" name="exp_month">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+                <select class="fields fi" id="exp_month" name="exp_month">
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+                <br><br><br>
+                <a href="Index.html" target="_self"><input id="B" type="button" value="Cancel" ></a>
+                <input id="S" type="submit"  value="Make payment">
+                <br>
+                <br><br>
+                <input type="reset" value="Clear" id="R"><br><br>
+            </form>
+        </div>
+    </body>
+</html>

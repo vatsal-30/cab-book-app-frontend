@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Otp Validation</title>
+        <meta name="viewport" width=device-width initial-scale=1.0>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <style>
+            @media only screen and (max-width: 900px) and (min-width: 620px)
+            {
+                .box
+                {
+                    width: 500px;
+                    margin: auto;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    margin-top: 100px;
+                    margin-bottom: 25px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 43px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 98%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 100%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                }
+                .heading
+                {
+                    font-size: 90%;
+                }
+                .forgot
+                {
+                    font-size: 98%;
+                }
+            }
+            @media only screen and (max-width:620px)
+            {
+                .box
+                {
+                    box-sizing: border-box;
+                    border: none;
+                    box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0), 0 0px 0px 0 rgba(255, 255, 255, 0);
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 80px;
+                    margin-bottom: 0px;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                .fields
+                {
+                    width: 101%;
+                    box-sizing: border-box;
+                    height: 40px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 95%;
+                }
+                #S
+                {
+                    box-sizing: border-box;
+                    height: 45px;
+                    font-size: 95%;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+                .heading
+                {
+                    font-size: 90%;
+                }
+                .forgot
+                {
+                    font-size: 95%;
+                }
+            }
+            body
+            {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid grey;
+                border-radius: 12px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.116), 0 8px 15px 0 rgba(0, 0, 0, 0.103);
+                max-width: 740px;
+                margin: auto;
+                margin-top: 100px;
+                transition-duration: .2s;
+                margin-bottom: 25px;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 6px;
+                align-items: center;
+            }
+            input
+            {
+                font-size:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                width: 100%;
+                box-sizing: border-box;
+                height: 45px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                transition-duration: .2s;
+            }
+            input[type=submit]
+            {
+                box-sizing: border-box;
+                font-weight:600;
+                font-size: 108%;
+                background-color: #04AA6D;
+                border: 0px;
+                color: white;
+                border-radius: 12px;
+                height: 50px;
+                width: 100%;
+            }
+            input[type=submit]:hover
+            {
+                opacity: 80%;
+            }
+            input[type=password]
+            {
+                border: 1px solid rgb(88, 88, 88);
+                border-radius: 2px;
+            }
+            .forgot
+            {
+                box-sizing: border-box;
+                transition-duration: .2s;
+                border-radius: 1px;
+                color: rgb(39, 39, 39);
+                font-weight: 100;
+            }
+        </style>
+    </head>
+    <body class="box">
+            
+            <strong class="heading">
+                <h1  style="
+                box-sizing: border-box;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                font-size: 240%;">
+                Account recovery
+                </h1>
+            </strong>
+            <br><br>
+            <p class="forgot"  style="
+                box-sizing: border-box;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: left;
+                font-size: 108%;">
+                A 6-digit OTP has been send on the email.
+        </p>
+            <form action=""  method="post"  onsubmit="return checkForm()" name="Account">
+                
+                <b><label for="otp">OTP</label><br></b>
+                <input class="fields" type="password" id="otp" name="otp" maxlength="6" required placeholder="Enter OTP"><br>
+                <br><br>
+                <input id="S" type="submit"  value="Verify">
+                <br>
+                <br><br>
+            </form>
+    </body>
+</html>
